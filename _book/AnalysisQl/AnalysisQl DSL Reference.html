@@ -1,0 +1,750 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>AnalysisQl DSL Reference · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex-toc/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="AnalysisQl.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    文档共享中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="AnalysisQl.html">
+            
+                <a href="AnalysisQl.html">
+            
+                    
+                    AnalysisQl
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="AnalysisQl DSL Reference.html">
+            
+                <a href="AnalysisQl DSL Reference.html">
+            
+                    
+                    AnalysisQl DSL Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >AnalysisQl DSL Reference</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#analysisql"><b>1. </b>AnalysisQl</a></li><ul><li><span class="title-icon "></span><a href="#&#x67E5;&#x8BE2;&#x8BED;&#x6CD5;"><b>1.1. </b>&#x67E5;&#x8BE2;&#x8BED;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x8BE2;&#x7ED3;&#x679C;"><b>1.2. </b>&#x67E5;&#x8BE2;&#x7ED3;&#x679C;</a></li></ul><li><span class="title-icon "></span><a href="#gettopics"><b>2. </b>getTopics</a></li><li><span class="title-icon "></span><a href="#getdimentions&#xFF08;&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x7EF4;&#x5EA6;&#xFF09;"><b>3. </b>getDimentions&#xFF08;&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x7EF4;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#getdimentionvalues&#xFF08;&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x7EF4;&#x5EA6;&#x503C;&#xFF09;"><b>4. </b>getDimentionValues&#xFF08;&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x7EF4;&#x5EA6;&#x503C;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#getmetrics&#xFF08;&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x6307;&#x6807;&#xFF09;"><b>5. </b>getMetrics&#xFF08;&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x6307;&#x6807;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#query"><b>6. </b>query</a></li></ul></div><a href="#analysisql" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="analysisql"><a name="analysisql" class="anchor-navigation-ex-anchor" href="#analysisql"><i class="fa fa-link" aria-hidden="true"></i></a>1. AnalysisQl</h1>
+<p>AnalysisQl&#x662F;&#x4E00;&#x79CD; <strong>&#x5373;&#x5E2D;&#x67E5;&#x8BE2;</strong> &#xFF08;OLAP&#xFF09;&#x7684;&#x9886;&#x57DF;&#x63CF;&#x8FF0;&#x8BED;&#x8A00;&#xFF08;DSL&#xFF09;&#xFF0C;&#x5E94;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x4ED3;&#x5E93;&#x3001;&#x6570;&#x636E;&#x7EDF;&#x8BA1;&#x3001;&#x6570;&#x636E;&#x5206;&#x6790;&#x6216;&#x6570;&#x636E;&#x63A5;&#x53E3;&#x7B49;&#x4E1A;&#x52A1;&#x573A;&#x666F;&#xFF0C;&#x63D0;&#x4F9B;&#x4EE5;&#x4E0B;&#x80FD;&#x529B;&#xFF1A;</p>
+<ul>
+<li>&#x67E5;&#x8BE2;&#x4E3B;&#x9898;
+  &#x67E5;&#x8BE2;&#x6570;&#x636E;&#x7CFB;&#x7EDF;&#x4E2D;&#x6709;&#x54EA;&#x4E9B;&#x5206;&#x6790; <strong>&#x4E3B;&#x9898;</strong>&#x3002;</li>
+<li>&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x7EF4;&#x5EA6;
+  &#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x4E3B;&#x9898;&#x4E2D;&#x5305;&#x542B;&#x6709;&#x54EA;&#x4E9B; <strong>&#x7EF4;&#x5EA6;&#x9879;</strong>&#x3002;</li>
+<li>&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x7EF4;&#x5EA6;&#x503C;
+  &#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x4E3B;&#x9898;&#x3001;&#x6307;&#x5B9A;&#x7EF4;&#x5EA6;&#x4E2D;&#x5305;&#x542B;&#x6709;&#x54EA;&#x4E9B; <strong>&#x7EF4;&#x5EA6;&#x503C;</strong>&#x3002;</li>
+<li>&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x6307;&#x6807;
+  &#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x4E3B;&#x9898;&#x4E2D;&#x5305;&#x542B;&#x6709;&#x54EA;&#x4E9B; <strong>&#x6307;&#x6807;&#x9879;</strong>&#x3002;</li>
+<li>&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x6307;&#x6807;&#x503C;
+  &#x6309;&#x4E3B;&#x9898;&#x540D;&#x79F0;&#x3001;&#x6307;&#x6807;&#x540D;&#x79F0;&#x3001;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x3001;&#x65F6;&#x95F4;&#x7C92;&#x5EA6;&#x3001;&#x7EF4;&#x5EA6;&#x5206;&#x7EC4;/&#x8FC7;&#x6EE4;&#x3001;&#x6392;&#x5E8F;&#x7B49;&#x6761;&#x4EF6;&#x67E5;&#x8BE2; <strong>&#x6307;&#x6807;&#x6570;&#x503C;</strong>&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;SQL: &quot;SELECT ... FROM ... WHERE ... GROUP BY ... HAVING ... ORDER BY ... LIMIT ...&quot;&#x3002;</li>
+</ul>
+<p>&#x4EE5;&#x201C;CDN&#x670D;&#x52A1;&#x8D28;&#x91CF;&#x5206;&#x6790;&#x201D;&#x4E3A;&#x4F8B;&#xFF0C;</p>
+<p>&#x4E3B;&#x9898;&#xFF1A;CDN&#x670D;&#x52A1;&#x8D28;&#x91CF;&#x5206;&#x6790;&#xFF1B;
+&#x7EF4;&#x5EA6;&#xFF1A;&#x56FD;&#x5BB6;&#x3001;&#x7701;&#x4EFD;&#x3001;&#x57CE;&#x5E02;&#x3001;&#x8FD0;&#x8425;&#x5546;&#x3001;&#x57DF;&#x540D;&#x3001;&#x673A;&#x623F;&#x3001;&#x57DF;&#x540D;&#x3001;&#x4E1A;&#x52A1;&#x540D;&#x79F0;&#x7B49;&#xFF1B;
+&#x6307;&#x6807;&#xFF1A;&#x5E26;&#x5BBD;&#x3001;&#x8BBF;&#x95EE;&#x91CF;&#x3001;&#x9519;&#x8BEF;&#x91CF;&#x3001;&#x4E0B;&#x8F7D;&#x901F;&#x5EA6;&#x3001;&#x4E0B;&#x8F7D;&#x65F6;&#x957F;&#x3001;&#x56DE;&#x6E90;&#x7387;&#x7B49;&#xFF1B;</p>
+<p>&#x67E5;&#x8BE2;&#x6307;&#x6807;&#x503C;&#x793A;&#x4F8B;&#xFF1A;&#x6700;&#x8FD1;1&#x5C0F;&#x65F6;&#x5185;&#xFF0C;&#x4EE5;5&#x5206;&#x949F;&#x4E3A;&#x7C92;&#x5EA6;&#xFF0C;&#x4E2D;&#x56FD;&#x5730;&#x533A;&#x7684;&#x6BCF;&#x4E2A;&#x57DF;&#x540D;&#x7684;&#x5E73;&#x5747;&#x4E0B;&#x8F7D;&#x901F;&#x5EA6;&#x662F;&#x591A;&#x5C11;&#xFF1F;</p>
+<h2 id="&#x67E5;&#x8BE2;&#x8BED;&#x6CD5;"><a name="&#x67E5;&#x8BE2;&#x8BED;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x8BE2;&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x67E5;&#x8BE2;&#x8BED;&#x6CD5;</h2>
+<p>AnalysisQl&#x67E5;&#x8BE2;&#x8BED;&#x8A00;&#x4F7F;&#x7528;JSON&#x5BF9;&#x8C61;&#x8868;&#x793A;&#xFF0C;</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>,
+  ...
+}
+</code></pre>
+<p>&#x5176;&#x4E2D;&#xFF0C;<strong>type</strong> &#x9ED8;&#x8BA4;&#x5FC5;&#x987B;&#x5B58;&#x5728;&#xFF0C;&#x5176;&#x4F59;&#x952E;&#x503C;&#x5BF9;&#x6839;&#x636E;&#x201C;type&#x201D;&#x7684;&#x4E0D;&#x540C;&#x53D6;&#x503C;&#x8FDB;&#x884C;&#x6307;&#x5B9A;&#x3002;</p>
+<p>&#x201C;type&#x201D;&#x53D6;&#x503C;&#x8303;&#x56F4;&#xFF1A;</p>
+<ul>
+<li>getTopics
+  &#x8868;&#x793A;&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#xFF1B;</li>
+<li>getDimentions
+  &#x8868;&#x793A;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x4E3B;&#x9898;&#x7684;&#x7EF4;&#x5EA6;&#x9879;&#xFF1B;</li>
+<li>getDimentionValues
+  &#x8868;&#x793A;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x4E3B;&#x9898;&#x3001;&#x6307;&#x5B9A;&#x7EF4;&#x5EA6;&#x7684;&#x7EF4;&#x5EA6;&#x503C;&#xFF1B;</li>
+<li>getMetrics
+  &#x8868;&#x793A;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x4E3B;&#x9898;&#x7684;&#x6307;&#x6807;&#x9879;&#xFF1B;</li>
+<li>query
+  &#x8868;&#x793A;&#x4EE5;&#x7279;&#x5B9A;&#x7684;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#xFF0C;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x4E3B;&#x9898;&#x3001;&#x6307;&#x5B9A;&#x6307;&#x6807;&#x7684;&#x6570;&#x503C;&#xFF1B;</li>
+</ul>
+<h2 id="&#x67E5;&#x8BE2;&#x7ED3;&#x679C;"><a name="&#x67E5;&#x8BE2;&#x7ED3;&#x679C;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x8BE2;&#x7ED3;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x67E5;&#x8BE2;&#x7ED3;&#x679C;</h2>
+<p>AnalysisQl&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x4F7F;&#x7528;JSON&#x5BF9;&#x8C61;&#x8868;&#x793A;&#xFF0C;</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;sessionId&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>,
+  <span class="hljs-string">&quot;code&quot;</span>: ...,
+  <span class="hljs-string">&quot;msg&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>,
+  <span class="hljs-string">&quot;rows&quot;</span>: [{<span class="hljs-string">&quot;dimension&quot;</span>: <span class="hljs-string">&quot;str&quot;</span>}, {<span class="hljs-string">&quot;metric&quot;</span>: number}, ...]
+}
+</code></pre>
+<p>sessionId: &#x67E5;&#x8BE2;ID&#xFF0C;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x4E00;&#x6B21;&#x67E5;&#x8BE2;&#xFF1B;
+code: &#x67E5;&#x8BE2;&#x54CD;&#x5E94;&#x72B6;&#x6001;&#x7801;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;HTTP&#x72B6;&#x6001;&#x7801;&#xFF1B;
+msg: &#x67E5;&#x8BE2;&#x54CD;&#x5E94;&#x72B6;&#x6001;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;&#xFF0C;&#x4E0E;&quot;code&quot;&#x76F8;&#x5BF9;&#x5E94;&#xFF1B;&#x5982;&#x679C;&#x67E5;&#x8BE2;&#x6267;&#x884C;&#x5F02;&#x5E38;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x5177;&#x4F53;&#x7684;&#x5F02;&#x5E38;&#x4FE1;&#x606F;&#xFF1B;
+rows: &#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x96C6;&#xFF1B;&#x4F7F;&#x7528;JSON&#x6570;&#x7EC4;&#x8868;&#x793A;&#xFF0C;&#x8868;&#x793A;&#x591A;&#x884C;&#x6570;&#x636E;&#xFF1B;&#x6BCF;&#x4E00;&#x884C;&#x6570;&#x636E;&#x4F7F;&#x7528;JSON&#x5BF9;&#x8C61;&#x8868;&#x793A;&#xFF0C;&#x8868;&#x793A;&#x591A;&#x5217;&#x6570;&#x636E;&#xFF1B;&#x6BCF;&#x4E00;&#x5217;&#x6570;&#x636E;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x952E;&#x503C;&#x5BF9;&#x8868;&#x793A;&#xFF0C;&#x503C;&#x53EA;&#x80FD;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x6570;&#x503C;&#x7C7B;&#x578B;&#xFF1B;</p>
+<p><strong>&#x6CE8;</strong>&#xFF1A;&#x540E;&#x6587;&#x63CF;&#x8FF0;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x65F6;&#xFF0C;&#x4EC5;&#x6D89;&#x53CA;&#x201C;rows&#x201D;&#x3002;</p>
+<h1 id="gettopics"><a name="gettopics" class="anchor-navigation-ex-anchor" href="#gettopics"><i class="fa fa-link" aria-hidden="true"></i></a>2. getTopics</h1>
+<p>&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#xFF08;&#x591A;&#x4E2A;&#xFF09;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x4E3B;&#x9898;&#x5305;&#x62EC;&#xFF1A;topic&#xFF08;&#x540D;&#x79F0;&#xFF09;&#x3001;alias&#xFF08;&#x522B;&#x540D;&#xFF09;&#x3001;desc&#xFF08;&#x63CF;&#x8FF0;&#xFF09;&#x3002;</p>
+<ol>
+<li><p>&#x8BED;&#x6CD5;</p>
+<pre><code class="lang-json"> {
+   <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;getTopics&quot;</span>
+ }
+</code></pre>
+</li>
+<li><p>&#x793A;&#x4F8B;</p>
+<p> &#x67E5;&#x8BE2;&#x7CFB;&#x7EDF;&#x4E2D;&#x6240;&#x6709;&#x4E3B;&#x9898;&#xFF1A;</p>
+<pre><code class="lang-json"> {
+   <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;getTopics&quot;</span>
+ }
+</code></pre>
+<p> &#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-json"> [
+     {
+         <span class="hljs-string">&quot;topic&quot;</span>: <span class="hljs-string">&quot;CDN&#x670D;&#x52A1;&#x8D28;&#x91CF;&#x5206;&#x6790;&quot;</span>,
+         <span class="hljs-string">&quot;alias&quot;</span>: <span class="hljs-string">&quot;CDN&#x670D;&#x52A1;&#x8D28;&#x91CF;&#x5206;&#x6790;&quot;</span>,
+         <span class="hljs-string">&quot;desc&quot;</span>: <span class="hljs-string">&quot;CDN&#x670D;&#x52A1;&#x8D28;&#x91CF;&#xFF0C;&#x5305;&#x62EC;&#xFF1A;Edge&#x3001;&#x963F;&#x91CC;&#x4E91;&#x3001;&#x767D;&#x5C71;&#x4E91;&#x3001;&#x817E;&#x8BAF;&#x4E91;&#x3001;&#x534E;&#x4E3A;&#x4E91;&#x3001;&#x7F51;&#x5BBF;&#x7B49;&#xFF0C;&#x5206;&#x6790;&#x6307;&#x6807;&#xFF1A;&#x5E26;&#x5BBD;&#x3001;&#x8BBF;&#x95EE;&#x91CF;&#x3001;&#x9519;&#x8BEF;&#x91CF;&#x3001;&#x4E0B;&#x8F7D;&#x901F;&#x5EA6;&#x3001;&#x4E0B;&#x8F7D;&#x65F6;&#x957F;&#x3002;&quot;</span>
+     },
+     ...
+ ]
+</code></pre>
+</li>
+</ol>
+<h1 id="getdimentions&#xFF08;&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x7EF4;&#x5EA6;&#xFF09;"><a name="getdimentions&#xFF08;&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x7EF4;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#getdimentions&#xFF08;&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x7EF4;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>3. getDimentions&#xFF08;&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x7EF4;&#x5EA6;&#xFF09;</h1>
+<p>&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x4E3B;&#x9898;&#x7684;&#x7EF4;&#x5EA6;&#x9879;&#xFF08;&#x591A;&#x4E2A;&#xFF09;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x7EF4;&#x5EA6;&#x9879;&#x5305;&#x62EC;&#xFF1A;name&#xFF08;&#x540D;&#x79F0;&#xFF09;&#x3001;alias&#xFF08;&#x522B;&#x540D;&#xFF09;&#x3001;desc&#xFF08;&#x63CF;&#x8FF0;&#xFF09;&#x3002;</p>
+<ol>
+<li><p>&#x8BED;&#x6CD5;</p>
+<pre><code class="lang-json"> {
+   <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;getDimentions&quot;</span>,
+   <span class="hljs-string">&quot;topic&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>
+ }
+</code></pre>
+<p> topic&#xFF1A;&#x4E3B;&#x9898;&#x540D;&#x79F0;&#xFF08;&#x5FC5;&#x987B;&#xFF09;&#xFF1B;</p>
+</li>
+<li><p>&#x793A;&#x4F8B;</p>
+<p> &#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x201C;CDN&#x670D;&#x52A1;&#x8D28;&#x91CF;&#x5206;&#x6790;&#x201D;&#x7684;&#x7EF4;&#x5EA6;&#x9879;&#xFF1A;</p>
+<pre><code class="lang-json"> {
+   <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;getDimentions&quot;</span>,
+   <span class="hljs-string">&quot;topic&quot;</span>: <span class="hljs-string">&quot;CDN&#x670D;&#x52A1;&#x8D28;&#x91CF;&#x5206;&#x6790;&quot;</span>
+ }
+</code></pre>
+<p> &#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-json"> [
+     {
+         <span class="hljs-string">&quot;alias&quot;</span>: <span class="hljs-string">&quot;&#x8FD0;&#x8425;&#x5546;&quot;</span>,
+         <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;isp&quot;</span>,
+         <span class="hljs-string">&quot;desc&quot;</span>: <span class="hljs-literal">null</span>
+     },
+     ...
+ ]
+</code></pre>
+</li>
+</ol>
+<h1 id="getdimentionvalues&#xFF08;&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x7EF4;&#x5EA6;&#x503C;&#xFF09;"><a name="getdimentionvalues&#xFF08;&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x7EF4;&#x5EA6;&#x503C;&#xFF09;" class="anchor-navigation-ex-anchor" href="#getdimentionvalues&#xFF08;&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x7EF4;&#x5EA6;&#x503C;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>4. getDimentionValues&#xFF08;&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x7EF4;&#x5EA6;&#x503C;&#xFF09;</h1>
+<p>&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x4E3B;&#x9898;&#x3001;&#x6307;&#x5B9A;&#x7EF4;&#x5EA6;&#x7684;&#x7EF4;&#x5EA6;&#x503C;&#xFF08;&#x591A;&#x4E2A;&#xFF09;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x7EF4;&#x5EA6;&#x503C;&#x5305;&#x62EC;&#xFF1A;value&#xFF08;&#x503C;&#xFF09;&#x3002;</p>
+<ol>
+<li><p>&#x8BED;&#x6CD5;</p>
+<pre><code class="lang-json"> {
+   <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;getDimentionValues&quot;</span>,
+   <span class="hljs-string">&quot;topic&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>,
+   <span class="hljs-string">&quot;dimension&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>,
+   <span class="hljs-string">&quot;where&quot;</span>: {...}
+ }
+</code></pre>
+<p> topic&#xFF1A;&#x4E3B;&#x9898;&#x540D;&#x79F0;&#xFF08;&#x5FC5;&#x987B;&#xFF09;&#xFF1B;
+ dimension&#xFF1A;&#x7EF4;&#x5EA6;&#x540D;&#x79F0;&#xFF08;&#x5FC5;&#x987B;&#xFF09;&#xFF1B;
+ where&#xFF1A;&#x7EF4;&#x5EA6;&#x8FC7;&#x6EE4;&#x6761;&#x4EF6;&#xFF0C;&#x7528;&#x4E8E;&#x7EF4;&#x5EA6;&#x7EA7;&#x8054;&#x67E5;&#x8BE2;&#xFF0C;&#x6682;&#x4E0D;&#x652F;&#x6301;&#xFF08;&#x975E;&#x5FC5;&#x987B;&#xFF09;&#xFF1B;</p>
+</li>
+<li><p>&#x793A;&#x4F8B;</p>
+<p> &#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x201C;CDN&#x670D;&#x52A1;&#x8D28;&#x91CF;&#x5206;&#x6790;&#x201D;&#x3001;&#x7EF4;&#x5EA6;&#x201C;isp&#x201D;&#x7684;&#x7EF4;&#x5EA6;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;getDimensionValues&quot;</span>,
+     <span class="hljs-string">&quot;topic&quot;</span>: <span class="hljs-string">&quot;CDN&#x670D;&#x52A1;&#x8D28;&#x91CF;&#x5206;&#x6790;&quot;</span>,
+     <span class="hljs-string">&quot;dimension&quot;</span>: <span class="hljs-string">&quot;isp&quot;</span>
+ }
+</code></pre>
+<p> &#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-json"> [
+     {
+         <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;&#x79FB;&#x52A8;&quot;</span>
+     },
+     ....
+ ]
+</code></pre>
+</li>
+</ol>
+<h1 id="getmetrics&#xFF08;&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x6307;&#x6807;&#xFF09;"><a name="getmetrics&#xFF08;&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x6307;&#x6807;&#xFF09;" class="anchor-navigation-ex-anchor" href="#getmetrics&#xFF08;&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x6307;&#x6807;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>5. getMetrics&#xFF08;&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x6307;&#x6807;&#xFF09;</h1>
+<p>&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x4E3B;&#x9898;&#x7684;&#x6307;&#x6807;&#x9879;&#xFF08;&#x591A;&#x4E2A;&#xFF09;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x6307;&#x6807;&#x9879;&#x5305;&#x62EC;&#xFF1A;name&#xFF08;&#x540D;&#x79F0;&#xFF09;&#x3001;alias&#xFF08;&#x522B;&#x540D;&#xFF09;&#x3001;desc&#xFF08;&#x63CF;&#x8FF0;&#xFF09;&#x3001;rule&#xFF08;&#x8BA1;&#x7B97;&#x89C4;&#x5219;&#xFF09;&#x3002;&#x5176;&#x4E2D;&#xFF0C;rule&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;&#x201C;custom&#x201D;&#xFF1B;&#x5982;&#x679C;&#x6307;&#x6807;&#x8BA1;&#x7B97;&#x57FA;&#x4E8E;SQL&#x5B9E;&#x73B0;&#xFF0C;rule&#x5219;&#x4E3A;&#x76F8;&#x5E94;&#x7684;SQL&#x8BED;&#x53E5;&#x3002;</p>
+<ol>
+<li><p>&#x8BED;&#x6CD5;</p>
+<pre><code class="lang-json"> {
+   <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;getMetrics&quot;</span>,
+   <span class="hljs-string">&quot;topic&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>
+ }
+</code></pre>
+<p> topic&#xFF1A;&#x4E3B;&#x9898;&#x540D;&#x79F0;&#xFF08;&#x5FC5;&#x987B;&#xFF09;&#xFF1B;</p>
+</li>
+<li><p>&#x793A;&#x4F8B;</p>
+<p> &#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x201C;CDN&#x670D;&#x52A1;&#x8D28;&#x91CF;&#x5206;&#x6790;&#x201D;&#x7684;&#x6307;&#x6807;&#x9879;&#xFF1A;</p>
+<pre><code class="lang-json"> {
+   <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;getMetrics&quot;</span>,
+   <span class="hljs-string">&quot;topic&quot;</span>: <span class="hljs-string">&quot;CDN&#x670D;&#x52A1;&#x8D28;&#x91CF;&#x5206;&#x6790;&quot;</span>
+ }
+</code></pre>
+<p> &#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-json"> [
+     {
+         <span class="hljs-string">&quot;alias&quot;</span>: <span class="hljs-string">&quot;&#x4E0B;&#x8F7D;&#x65F6;&#x95F4;&#xFF08;s&#xFF09;&quot;</span>,
+         <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;download_time_avg&quot;</span>,
+         <span class="hljs-string">&quot;rule&quot;</span>: <span class="hljs-string">&quot;SELECT SUM(request_time) / SUM(request_num) AS $METRIC FROM cdn-all_cdn_staging WHERE $WHERE AND regexp_like(httpcode, \&quot;^[^45].*$\&quot;) GROUP BY $GROUPS HAVING $HAVING AND download_time_avg != Infinity AND download_time_avg != NaN AND download_time_avg &gt;= 0.0 ORDER BY $ORDERS LIMIT $LIMIT&quot;</span>,
+         <span class="hljs-string">&quot;desc&quot;</span>: <span class="hljs-literal">null</span>
+     }, 
+     ...
+ ]
+</code></pre>
+</li>
+</ol>
+<h1 id="query"><a name="query" class="anchor-navigation-ex-anchor" href="#query"><i class="fa fa-link" aria-hidden="true"></i></a>6. query</h1>
+<p>&#x67E5;&#x8BE2;&#x6307;&#x6807;&#x503C;&#x3002;</p>
+<ol>
+<li><p>&#x8BED;&#x6CD5;</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;query&quot;</span>,
+     <span class="hljs-string">&quot;topic&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>,
+     <span class="hljs-string">&quot;interval&quot;</span>: {...},
+     <span class="hljs-string">&quot;granularity&quot;</span>: {...},
+     <span class="hljs-string">&quot;metric&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>,
+     <span class="hljs-string">&quot;where&quot;</span>: {...},
+     <span class="hljs-string">&quot;groups&quot;</span>: [...],
+     <span class="hljs-string">&quot;having&quot;</span>: {...},
+     <span class="hljs-string">&quot;orders&quot;</span>: [...],
+     <span class="hljs-string">&quot;limit&quot;</span>: ...
+ }
+</code></pre>
+<p> 1.1 topic</p>
+<p> &#x4E3B;&#x9898;&#x540D;&#x79F0;&#xFF08;&#x5FC5;&#x987B;&#xFF09;&#x3002;</p>
+<p> 1.2 interval</p>
+<p> &#x65F6;&#x95F4;&#x8303;&#x56F4;&#xFF08;&#x5FC5;&#x987B;&#xFF09;&#xFF0C;&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>,
+     <span class="hljs-string">&quot;end&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>
+ }
+</code></pre>
+<p> start/end&#x5747;&#x4E3A;&#x95ED;&#x533A;&#x95F4;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;yyyy-MM-dd HH:mm:ss&#x3002;</p>
+<p> &#x4F8B;&#x5982;&#xFF0C;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#xFF1A;[2020-03-16 00:00:00, 2020-03-16 23:59:59]&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-string">&quot;2020-03-16 00:00:00&quot;</span>,
+     <span class="hljs-string">&quot;end&quot;</span>: <span class="hljs-string">&quot;2020-03-16 23:59:59&quot;</span>
+ }
+</code></pre>
+<p> 1.3 granularity</p>
+<p> &#x65F6;&#x95F4;&#x7C92;&#x5EA6;&#xFF08;&#x5FC5;&#x987B;&#xFF09;&#xFF0C;&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;data&quot;</span>: ...,
+     <span class="hljs-string">&quot;unit&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>
+ }
+</code></pre>
+<p> data&#xFF1A; &#x6570;&#x503C;&#xFF08;&#x6574;&#x578B;&#xFF09;&#xFF1B;
+ unit: &#x5355;&#x4F4D;&#xFF0C;s(&#x79D2;)&#x3001;m&#xFF08;&#x5206;&#x949F;&#xFF09;&#x3001;h&#xFF08;&#x5C0F;&#x65F6;&#xFF09;&#x3001;d&#xFF08;&#x5929;&#xFF09;&#x3001;w&#xFF08;&#x5468;&#xFF09;&#x3001;M&#xFF08;&#x6708;&#xFF09;&#x3001;y&#xFF08;&#x5E74;&#xFF09;;</p>
+<p> &#x4F8B;&#x5982;&#xFF0C;&#x65F6;&#x95F4;&#x7C92;&#x5EA6;&#xFF1A;5&#x5206;&#x949F;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;data&quot;</span>: <span class="hljs-number">5</span>,
+     <span class="hljs-string">&quot;unit&quot;</span>: <span class="hljs-string">&quot;m&quot;</span>
+ }
+</code></pre>
+<p> 1.4 metric</p>
+<p> &#x6307;&#x6807;&#x540D;&#x79F0;&#xFF08;&#x5FC5;&#x987B;&#xFF09;&#x3002;</p>
+<p> 1.5 where</p>
+<p> &#x7EF4;&#x5EA6;&#x8FC7;&#x6EE4;&#xFF08;&#x975E;&#x5FC5;&#x987B;&#xFF09;&#xFF0C; &#x652F;&#x6301;&#x6BD4;&#x8F83;&#x8868;&#x8FBE;&#x5F0F;&#x4E0E;&#x903B;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;&#x3002;</p>
+<p> 1.5.1 &#x6BD4;&#x8F83;&#x8868;&#x8FBE;&#x5F0F;</p>
+<p> a. eq/ne/gt/lt/ge/le</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>,
+     <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>,
+     <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>
+ }
+</code></pre>
+<p> operator&#xFF1A;eq&#xFF08;&#x7B49;&#x4E8E;&#xFF09;&#x3001;ne&#xFF08;&#x4E0D;&#x7B49;&#x4E8E;&#xFF09;&#x3001;gt&#xFF08;&#x5927;&#x4E8E;&#xFF09;&#x3001;lt&#xFF08;&#x5C0F;&#x4E8E;&#xFF09;&#x3001;ge&#xFF08;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;&#xFF09;&#x3001;le&#xFF08;&#x5C0F;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;&#xFF09;&#xFF1B;
+ name&#xFF1A;&#x7EF4;&#x5EA6;&#x540D;&#x79F0;&#xFF1B;
+ value&#xFF1A;&#x7EF4;&#x5EA6;&#x503C;&#xFF1B;</p>
+<p> &#x4F8B;&#x5982;&#xFF0C;&#x56FD;&#x5BB6;&#xFF08;country&#xFF09;&#x4E3A;&#x201C;&#x4E2D;&#x56FD;&#x201D;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;eq&quot;</span>,
+     <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;country&quot;</span>,
+     <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;&#x4E2D;&#x56FD;&quot;</span>
+ }
+</code></pre>
+<p> b. in</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;in&quot;</span>,
+     <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>,
+     <span class="hljs-string">&quot;values&quot;</span>: [...]
+ }
+</code></pre>
+<p> operator&#xFF1A;in&#xFF08;&#x5305;&#x542B;&#xFF09;&#xFF1B;
+ name&#xFF1A;&#x7EF4;&#x5EA6;&#x540D;&#x79F0;&#xFF1B;
+ values&#xFF1A;&#x7EF4;&#x5EA6;&#x503C;&#x5217;&#x8868;&#xFF0C;&#x4F7F;&#x7528;JSON&#x6570;&#x636E;&#x8868;&#x793A;&#xFF1B;</p>
+<p> &#x4F8B;&#x5982;&#xFF0C;&#x56FD;&#x5BB6;&#xFF08;country&#xFF09;&#x4E3A;&#x201C;&#x4E2D;&#x56FD;&#x201D;&#x3001;&#x201C;&#x7F8E;&#x56FD;&#x201D;&#x6216;&#x201C;&#x65E5;&#x672C;&#x201D;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;in&quot;</span>,
+     <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;country&quot;</span>,
+     <span class="hljs-string">&quot;values&quot;</span>: [<span class="hljs-string">&quot;&#x4E2D;&#x56FD;&quot;</span>, <span class="hljs-string">&quot;&#x7F8E;&#x56FD;&quot;</span>, <span class="hljs-string">&quot;&#x65E5;&#x672C;&quot;</span>]
+ }
+</code></pre>
+<p> c. regex</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;regex&quot;</span>,
+     <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>,
+     <span class="hljs-string">&quot;pattern&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>
+ }
+</code></pre>
+<p> operator&#xFF1A;regex&#xFF08;&#x6B63;&#x5219;&#x5339;&#x914D;&#xFF09;&#xFF1B;
+ name&#xFF1A;&#x7EF4;&#x5EA6;&#x540D;&#x79F0;&#xFF1B;
+ pattern&#xFF1A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF1B;</p>
+<p> &#x4F8B;&#x5982;&#xFF0C;&#x57DF;&#x540D;&#xFF08;domain&#xFF09;&#x5305;&#x542B;&#x6709;&#x5B57;&#x7B26;&#x4E32;&#x201C;weibo&#x201D;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;regex&quot;</span>,
+     <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;domain&quot;</span>,
+     <span class="hljs-string">&quot;pattern&quot;</span>: <span class="hljs-string">&quot;^.*weibo.*$&quot;</span>
+ }
+</code></pre>
+<p> 1.5.2 &#x903B;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;</p>
+<p> a. and</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;and&quot;</span>,
+     <span class="hljs-string">&quot;filters&quot;</span>: [...]
+ }
+</code></pre>
+<p> operator&#xFF1A;and&#xFF08;&#x4E0E;&#xFF09;&#xFF1B;
+ filters&#xFF1A;&#x4E24;&#x4E2A;&#x6216;&#x4E24;&#x4E2A;&#x4EE5;&#x4E0A;&#x7684;&#x6BD4;&#x8F83;&#x8868;&#x8FBE;&#x5F0F;&#x6216;&#x903B;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;&#xFF1B;&#x6BD4;&#x8F83;&#x8868;&#x8FBE;&#x5F0F;&#x548C;&#x903B;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;&#x53EF;&#x4EE5;&#x6DF7;&#x5408;&#x4F7F;&#x7528;&#xFF1B;&#x903B;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;&#x53EF;&#x4EE5;&#x5D4C;&#x5957;&#x4F7F;&#x7528;&#xFF1B;</p>
+<p> &#x4F8B;&#x5982;&#xFF1A;&#x56FD;&#x5BB6;&#xFF08;country&#xFF09;&#x4E3A;&#x201C;&#x4E2D;&#x56FD;&#x201D;&#x3001;&#x201C;&#x7F8E;&#x56FD;&#x201D;&#x6216;&#x201C;&#x65E5;&#x672C;&#x201D;&#xFF0C;<strong>&#x4E14;</strong> &#x57DF;&#x540D;&#xFF08;domain&#xFF09;&#x5305;&#x542B;&#x6709;&#x5B57;&#x7B26;&#x4E32;&#x201C;weibo&#x201D;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;and&quot;</span>,
+     <span class="hljs-string">&quot;filters&quot;</span>: [
+         {
+             <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;in&quot;</span>,
+             <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;country&quot;</span>,
+             <span class="hljs-string">&quot;values&quot;</span>: [<span class="hljs-string">&quot;&#x4E2D;&#x56FD;&quot;</span>, <span class="hljs-string">&quot;&#x7F8E;&#x56FD;&quot;</span>, <span class="hljs-string">&quot;&#x65E5;&#x672C;&quot;</span>]
+         },
+         {
+             <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;regex&quot;</span>,
+             <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;domain&quot;</span>,
+             <span class="hljs-string">&quot;pattern&quot;</span>: <span class="hljs-string">&quot;^.*weibo.*$&quot;</span>
+         }
+     ]
+ }
+</code></pre>
+<p> b. or</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;or&quot;</span>,
+     <span class="hljs-string">&quot;filters&quot;</span>: [...]
+ }
+</code></pre>
+<p> operator&#xFF1A;or&#xFF08;&#x6216;&#xFF09;&#xFF1B;
+ filters&#xFF1A;&#x4E24;&#x4E2A;&#x6216;&#x4E24;&#x4E2A;&#x4EE5;&#x4E0A;&#x7684;&#x6BD4;&#x8F83;&#x8868;&#x8FBE;&#x5F0F;&#x6216;&#x903B;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;&#xFF1B;&#x6BD4;&#x8F83;&#x8868;&#x8FBE;&#x5F0F;&#x548C;&#x903B;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;&#x53EF;&#x4EE5;&#x6DF7;&#x5408;&#x4F7F;&#x7528;&#xFF1B;&#x903B;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;&#x53EF;&#x4EE5;&#x5D4C;&#x5957;&#x4F7F;&#x7528;&#xFF1B;</p>
+<p> &#x4F8B;&#x5982;&#xFF1A;&#x56FD;&#x5BB6;&#xFF08;country&#xFF09;&#x4E3A;&#x201C;&#x4E2D;&#x56FD;&#x201D;&#x3001;&#x201C;&#x7F8E;&#x56FD;&#x201D;&#x6216;&#x201C;&#x65E5;&#x672C;&#x201D;&#xFF0C;<strong>&#x6216;</strong> &#x57DF;&#x540D;&#xFF08;domain&#xFF09;&#x5305;&#x542B;&#x6709;&#x5B57;&#x7B26;&#x4E32;&#x201C;weibo&#x201D;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;or&quot;</span>,
+     <span class="hljs-string">&quot;filters&quot;</span>: [
+         {
+             <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;in&quot;</span>,
+             <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;country&quot;</span>,
+             <span class="hljs-string">&quot;values&quot;</span>: [<span class="hljs-string">&quot;&#x4E2D;&#x56FD;&quot;</span>, <span class="hljs-string">&quot;&#x7F8E;&#x56FD;&quot;</span>, <span class="hljs-string">&quot;&#x65E5;&#x672C;&quot;</span>]
+         },
+         {
+             <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;regex&quot;</span>,
+             <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;domain&quot;</span>,
+             <span class="hljs-string">&quot;pattern&quot;</span>: <span class="hljs-string">&quot;^.*weibo.*$&quot;</span>
+         }
+     ]
+ }
+</code></pre>
+<p> c. not</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;not&quot;</span>,
+     <span class="hljs-string">&quot;filter&quot;</span>: {...}
+ }
+</code></pre>
+<p> operator&#xFF1A;not&#xFF08;&#x975E;&#xFF09;&#xFF1B;
+ filter&#xFF1A;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x8868;&#x8FBE;&#x5F0F;&#x6216;&#x903B;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;&#xFF1B;&#x903B;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;&#x53EF;&#x4EE5;&#x5D4C;&#x5957;&#x4F7F;&#x7528;&#xFF1B;</p>
+<p> &#x4F8B;&#x5982;&#xFF1A;&#x56FD;&#x5BB6;&#xFF08;country&#xFF09; <strong>&#x4E0D;</strong> &#x4E3A;&#x201C;&#x4E2D;&#x56FD;&#x201D;&#x3001;&#x201C;&#x7F8E;&#x56FD;&#x201D;&#x6216;&#x201C;&#x65E5;&#x672C;&#x201D;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;not&quot;</span>,
+     <span class="hljs-string">&quot;filter&quot;</span>: {
+         <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;in&quot;</span>,
+         <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;country&quot;</span>,
+         <span class="hljs-string">&quot;values&quot;</span>: [<span class="hljs-string">&quot;&#x4E2D;&#x56FD;&quot;</span>, <span class="hljs-string">&quot;&#x7F8E;&#x56FD;&quot;</span>, <span class="hljs-string">&quot;&#x65E5;&#x672C;&quot;</span>]
+     }
+ }
+</code></pre>
+<p> &#xA0;
+ <strong>&#x6CE8;</strong> &#xFF1A;&#x7EF4;&#x5EA6;&#x8FC7;&#x6EE4;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x7684;&#x201C;name&#x201D;&#x53EA;&#x80FD;&#x662F;&#x7EF4;&#x5EA6;&#x3002;</p>
+<p> 1.6 groups</p>
+<p> &#x7EF4;&#x5EA6;&#x5206;&#x7EC4;&#xFF08;&#x975E;&#x5FC5;&#x987B;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x591A;&#x4E2A;&#x7EF4;&#x5EA6;&#x503C;&#xFF0C;&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-json"> [
+     <span class="hljs-string">&quot;...&quot;</span>,
+     ...
+ ]
+</code></pre>
+<p> &#x4F8B;&#x5982;&#xFF1A;&#x4F7F;&#x7528;&#x56FD;&#x5BB6;&#xFF08;country&#xFF09;&#x3001;&#x57DF;&#x540D;&#xFF08;domain&#xFF09;&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#x7EDF;&#x8BA1;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json"> [
+     <span class="hljs-string">&quot;country&quot;</span>,
+     <span class="hljs-string">&quot;domain&quot;</span>    
+ ]
+</code></pre>
+<p> 1.7 having</p>
+<p> &#x5206;&#x7EC4;&#x8FC7;&#x6EE4;&#xFF08;&#x975E;&#x5FC5;&#x987B;&#xFF09;&#xFF0C;&#x8BED;&#x6CD5;&#x540C;where&#x3002;</p>
+<p> &#xA0;
+ <strong>&#x6CE8;</strong> &#xFF1A;&#x5206;&#x7EC4;&#x8FC7;&#x6EE4;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x7684;&#x201C;name&#x201D;&#x53EA;&#x80FD;&#x662F;&#x5206;&#x7EC4;&#xFF08;groups&#xFF09;&#x4E2D;&#x7684;&#x7EF4;&#x5EA6;&#x540D;&#x79F0;&#xFF0C;&#x6216;&#x662F;&#x6307;&#x6807;&#x540D;&#x79F0;&#xFF08;metric&#xFF09;&#x3002;&#x5176;&#x4E2D;&#xFF0C;&#x8FC7;&#x6EE4;&#x6307;&#x6807;&#xFF08;&#x503C;&#xFF09;&#x65F6;&#xFF0C;&#x8FC7;&#x6EE4;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x7684;&#x201C;value&#x201D;&#x987B;&#x662F;&#x6570;&#x503C;&#x7C7B;&#x578B;&#x3002;</p>
+<p> &#x4F8B;&#x5982;&#xFF1A;&#x4E0B;&#x8F7D;&#x901F;&#x5EA6;&#xFF08;download_speed_avg&#xFF09;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;1000 Kb/s&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;gt&quot;</span>,
+     <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;download_speed_avg&quot;</span>,
+     <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">1000</span>
+ }
+</code></pre>
+<p> 1.8 orders</p>
+<p> &#x6392;&#x5E8F;&#xFF08;&#x975E;&#x5FC5;&#x987B;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x591A;&#x4E2A;&#x6392;&#x5E8F;&#x6761;&#x4EF6;&#xFF0C;&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-json"> [
+     {
+         <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>,
+         <span class="hljs-string">&quot;sort&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>
+     },
+     ...
+ ]
+</code></pre>
+<p> name&#xFF1A;&#x201C;timeBucket&#x201D;&#xFF0C;&#x6216;&#x662F;&#x5206;&#x7EC4;&#xFF08;groups&#xFF09;&#x4E2D;&#x7684;&#x7EF4;&#x5EA6;&#x540D;&#x79F0;&#xFF0C;&#x6216;&#x662F;&#x6307;&#x6807;&#x540D;&#x79F0;&#xFF08;metric&#xFF09;&#xFF1B;
+ sort&#xFF1A;asc&#xFF08;&#x5347;&#x5E8F;&#xFF09;&#x6216;desc&#xFF08;&#x964D;&#x5E8F;&#xFF09;&#xFF1B;</p>
+<p> &#x4F8B;&#x5982;&#xFF1A;&#x4E0B;&#x8F7D;&#x901F;&#x5EA6;&#xFF08;download_speed_avg&#xFF09;&#x964D;&#x5E8F;&#x6392;&#x5217;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json"> [
+     {
+         <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;download_speed_avg&quot;</span>,
+         <span class="hljs-string">&quot;sort&quot;</span>: <span class="hljs-string">&quot;desc&quot;</span>
+     }
+ ]
+</code></pre>
+<p> <strong>&#x6CE8;</strong> &#xFF1A;&#x201C;timeBucket&#x201D; &#x4E3A;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#xFF08;interval&#xFF09;&#x6839;&#x636E;&#x65F6;&#x95F4;&#x7C92;&#x5EA6;&#xFF08;granularity&#xFF09;&#x5206;&#x6876;&#x4E4B;&#x540E;&#x7684;&#x5217;&#x540D;&#x79F0;&#x3002;</p>
+<p> 1.9 limit</p>
+<p> &#x7ED3;&#x679C;&#x96C6;&#x884C;&#x6570;&#xFF08;&#x975E;&#x5FC5;&#x987B;&#xFF09;&#x3002;</p>
+</li>
+<li><p>&#x793A;&#x4F8B;</p>
+<p> &#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p> &#x4E3B;&#x9898;&#xFF1A;CDN&#x670D;&#x52A1;&#x8D28;&#x91CF;&#x5206;&#x6790;&#xFF1B;
+ &#x65F6;&#x95F4;&#x8303;&#x56F4;&#xFF1A;[&quot;2020-03-16 00:00:00&quot;, &quot;2020-03-16 23:59:59&quot;];
+ &#x65F6;&#x95F4;&#x7C92;&#x5EA6;&#xFF1A;1&#x5C0F;&#x65F6;&#xFF1B;
+ &#x6307;&#x6807;&#xFF1A;&#x4E0B;&#x8F7D;&#x901F;&#x5EA6;&#xFF08;download_speed_avg&#xFF09;&#xFF1B;
+ &#x7EF4;&#x5EA6;&#x8FC7;&#x6EE4;&#xFF1A;&#x57DF;&#x540D;&#xFF08;domain&#xFF09;&#x5305;&#x542B;&#x6709;&#x5B57;&#x7B26;&#x4E32;&#x201C;weibo&#x201D;&#xFF1B;
+ &#x7EF4;&#x5EA6;&#x5206;&#x7EC4;&#xFF1A;&#x8FD0;&#x8425;&#x5546;&#xFF08;isp&#xFF09;&#xFF1B;
+ &#x5206;&#x7EC4;&#x8FC7;&#x6EE4;&#xFF1A;&#x4E0B;&#x8F7D;&#x901F;&#x5EA6;&#xFF08;download_speed_avg&#xFF09;&#x5927;&#x4E8E;2000 Kb/s&#xFF1B;
+ &#x6392;&#x5E8F;&#xFF1A;&#x4E0B;&#x8F7D;&#x901F;&#x5EA6;&#x964D;&#x5E8F;&#xFF08;download_speed_avg&#xFF09;&#xFF1B;
+ &#x7ED3;&#x679C;&#x96C6;&#xFF1A;&#x6700;&#x591A;100&#x884C;&#xFF1B;</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;query&quot;</span>,
+     <span class="hljs-string">&quot;topic&quot;</span>: <span class="hljs-string">&quot;CDN&#x670D;&#x52A1;&#x8D28;&#x91CF;&#x5206;&#x6790;&quot;</span>,
+     <span class="hljs-string">&quot;interval&quot;</span>: {
+         <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-string">&quot;2020-03-16 00:00:00&quot;</span>,
+         <span class="hljs-string">&quot;end&quot;</span>: <span class="hljs-string">&quot;2020-03-16 23:59:59&quot;</span>
+     },
+     <span class="hljs-string">&quot;granularity&quot;</span>: {
+         <span class="hljs-string">&quot;data&quot;</span>: <span class="hljs-number">1</span>,
+         <span class="hljs-string">&quot;unit&quot;</span>: <span class="hljs-string">&quot;h&quot;</span>
+     },
+     <span class="hljs-string">&quot;metric&quot;</span>: <span class="hljs-string">&quot;download_speed_avg&quot;</span>,
+     <span class="hljs-string">&quot;where&quot;</span>: {
+         <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;regex&quot;</span>,
+         <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;domain&quot;</span>,
+         <span class="hljs-string">&quot;pattern&quot;</span>: <span class="hljs-string">&quot;^.*weibo.*$&quot;</span>
+     },
+     <span class="hljs-string">&quot;groups&quot;</span>: [
+         <span class="hljs-string">&quot;isp&quot;</span>
+     ], 
+     <span class="hljs-string">&quot;having&quot;</span>: {
+         <span class="hljs-string">&quot;operator&quot;</span>: <span class="hljs-string">&quot;gt&quot;</span>,
+         <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;download_speed_avg&quot;</span>,
+         <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">2000</span>
+     },
+     <span class="hljs-string">&quot;orders&quot;</span>: [
+         {
+             <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;download_speed_avg&quot;</span>,
+             <span class="hljs-string">&quot;sort&quot;</span>: <span class="hljs-string">&quot;desc&quot;</span>
+         }
+     ], 
+     <span class="hljs-string">&quot;limit&quot;</span>: <span class="hljs-number">100</span>
+ }
+</code></pre>
+<p> &#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-json"> [
+     {
+         <span class="hljs-string">&quot;timeBucket&quot;</span>: <span class="hljs-string">&quot;2020-03-16 00:00:00&quot;</span>,
+         <span class="hljs-string">&quot;download_speed_avg&quot;</span>: <span class="hljs-number">12219.801698511234</span>,
+         <span class="hljs-string">&quot;isp&quot;</span>: <span class="hljs-string">&quot;&#x8054;&#x901A;&quot;</span>
+     }, 
+     {
+         <span class="hljs-string">&quot;timeBucket&quot;</span>: <span class="hljs-string">&quot;2020-03-16 00:00:00&quot;</span>,
+         <span class="hljs-string">&quot;download_speed_avg&quot;</span>: <span class="hljs-number">12099.871752209983</span>,
+         <span class="hljs-string">&quot;isp&quot;</span>: <span class="hljs-string">&quot;&#x957F;&#x57CE;&#x5BBD;&#x5E26;&quot;</span>
+     }, 
+     {
+         <span class="hljs-string">&quot;timeBucket&quot;</span>: <span class="hljs-string">&quot;2020-03-16 00:00:00&quot;</span>,
+         <span class="hljs-string">&quot;download_speed_avg&quot;</span>: <span class="hljs-number">10846.016188287193</span>,
+         <span class="hljs-string">&quot;isp&quot;</span>: <span class="hljs-string">&quot;&#x79FB;&#x52A8;&quot;</span>
+     },
+     ...
+ ]
+</code></pre>
+<p> &#xA0;
+ <strong>&#x6CE8;</strong> &#xFF1A;&#x8FD9;&#x91CC;&#x7684;&#x4E0B;&#x8F7D;&#x901F;&#x5EA6;&#xFF08;download_speed_avg&#xFF09;&#x4E3A;&#x6BCF;1&#x5C0F;&#x65F6;&#x7684;&#x5E73;&#x5747;&#x503C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x6700;&#x5927;&#x503C;&#x3001;&#x6700;&#x5C0F;&#x503C;&#x6216;&#x7D2F;&#x52A0;&#x503C;&#xFF0C;&#x53D6;&#x51B3;&#x4E8E;&#x6307;&#x6807;&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x3002;</p>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="AnalysisQl.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: AnalysisQl">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"AnalysisQl DSL Reference","level":"1.2.1","depth":2,"previous":{"title":"AnalysisQl","level":"1.2","depth":1,"path":"AnalysisQl/AnalysisQl.md","ref":"AnalysisQl/AnalysisQl.md","articles":[{"title":"AnalysisQl DSL Reference","level":"1.2.1","depth":2,"path":"AnalysisQl/AnalysisQl DSL Reference.md","ref":"AnalysisQl/AnalysisQl DSL Reference.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-small","-lunr","-search","search-plus","-sharing","splitter","anchor-navigation-ex-toc","hide-element","insert-logo","code"],"pluginsConfig":{"splitter":{},"code":{"copyButtons":true},"anchor-navigation-ex-toc":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 120px; min-height: 120px","url":"/images/logo.jpeg"},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"AnalysisQl/AnalysisQl DSL Reference.md","mtime":"2020-03-16T13:59:52.130Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-17T02:33:22.892Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
