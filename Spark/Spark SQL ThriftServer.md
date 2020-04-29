@@ -94,6 +94,12 @@ Enter password for jdbc:hive2://{HOSTNAME}:{PORT}:{PORT}
 &nbsp;
 注意，公平调度器可以有多个资源池，且每个资源池使用不同的调度模式。
 
+使用Beeline时，应用默认提交至default，可以使用如下命令切换资源池：
+
+```text
+SET spark.sql.thriftserver.scheduler.pool=pro;
+```
+
 启动命令示例：
 
 ```text
