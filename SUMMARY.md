@@ -1,6 +1,8 @@
 # Summary
 
 * [妹子、代码与猫](README.md)
+* [数据仓库](数据仓库/数据仓库.md)
+    * [Hive UDF使用资源文件及动态更新方案](数据仓库/Hive UDF使用资源文件及动态更新方案.md)
 * [Spark](Spark/Spark.md)
     * [Spark SQL ThriftServer](Spark/Spark SQL ThriftServer.md)
 * [AnalysisQl](AnalysisQl/AnalysisQl.md)
