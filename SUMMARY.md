@@ -1,6 +1,9 @@
 # Summary
 
 * [妹子、代码与猫](README.md)
+* [团队管理](团队管理/团队管理.md)
+    * [OKR实施方案](团队管理/OKR实施方案.md)
+    * [团队工作建议](团队管理/团队工作建议.md)
 * [数据仓库](数据仓库/数据仓库.md)
     * [Hive UDF使用资源文件及动态更新方案](数据仓库/Hive UDF使用资源文件及动态更新方案.md)
     * [Hive UDF使用资源文件及动态更新方案--后记.md](数据仓库/Hive UDF使用资源文件及动态更新方案--后记.md)
@@ -10,5 +13,4 @@
     * [AnalysisQl DSL Reference](AnalysisQl/AnalysisQl DSL Reference.md)
     * [AnalysisQl Request](AnalysisQl/AnalysisQl Request.md)
 * [杂货铺](杂货铺/杂货铺.md)
-    * [OKR实施方案](杂货铺/OKR实施方案.md)
     * [GitBook安装部署实操手册](杂货铺/GitBook安装部署实操手册.md) 
