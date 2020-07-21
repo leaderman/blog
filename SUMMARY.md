@@ -14,6 +14,7 @@
     * [Spark SQL ThriftServer](Spark/Spark SQL ThriftServer.md)
 * [AnalysisQl](AnalysisQl/AnalysisQl.md)
     * [微博大数据即席查询（OLAP）引擎实践](AnalysisQl/微博大数据即席查询（OLAP）引擎实践.md)
+    * [微博大数据即席查询（OLAP）引擎实践](AnalysisQl/微博大数据即席查询语言（AnalysisQl DSL）.md)
     * [AnalysisQl DSL Reference](AnalysisQl/AnalysisQl DSL Reference.md)
     * [AnalysisQl Request](AnalysisQl/AnalysisQl Request.md)
 * [杂货铺](杂货铺/杂货铺.md)
