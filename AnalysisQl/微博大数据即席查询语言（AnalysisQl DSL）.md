@@ -774,3 +774,8 @@ limit 指定查询结果返回的最大行数。
 
 AnalysisQl DSL 最大的价值是提供了一种统一的查询语言，实现数据应用服务（数据可视化、报表、数据接口）和查询引擎、指标计算规则的解耦，降低数据的开发和维护成本。本文描述的内容并不能完全覆盖即席查询的全部应用场景，仅供大家借鉴参考。
 
+&nbsp;
+&nbsp;
+&nbsp;
+![](https://yurun-blog.oss-cn-beijing.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/card.png)
+
