@@ -15,6 +15,7 @@
 * [AnalysisQl](AnalysisQl/AnalysisQl.md)
     * [微博大数据即席查询（OLAP）引擎实践](AnalysisQl/微博大数据即席查询（OLAP）引擎实践.md)
     * [微博大数据即席查询语言（AnalysisQl DSL）](AnalysisQl/微博大数据即席查询语言（AnalysisQl DSL）.md)
+    * [微博AnalysisQl动态数据视图元数据设计）](AnalysisQl/微博AnalysisQl动态数据视图元数据设计.md)
     * [AnalysisQl DSL Reference](AnalysisQl/AnalysisQl DSL Reference.md)
     * [AnalysisQl Request](AnalysisQl/AnalysisQl Request.md)
 * [杂货铺](杂货铺/杂货铺.md)
